@@ -1,1 +1,3 @@
-# Tugas-Akhir-Pemweb-5
+# Tugas Akhir Pemweb
+
+![Calculator Preview](Kalkulator.png)
