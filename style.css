@@ -1,0 +1,134 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+
+.calculator {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 20px;
+  background: #2c2c2c;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+  width: 100%;
+  height: 70px;
+  font-size: 36px;
+  text-align: right;
+  padding-right: 15px;
+  border: none;
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #111;
+}
+
+button {
+  padding: 25px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.number {
+  background: #d4d4d2;
+  color: #000;
+}
+
+.number.zero {
+  grid-column: span 2;
+}
+
+.operator,
+.equals {
+  background: #ff9500;
+  color: #fff;
+}
+
+.clear,
+.memory,
+.function {
+  background: #a6a6a6;
+  color: #000;
+}
+
+.memory-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background: #1e1e1e;
+}
+
+.memory-btn {
+  flex: 1;
+  margin: 2px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 6px;
+  background: #d4d4d2;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.history {
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fff;
+  color: #000;
+  padding: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .display {
+    height: 55px;
+    font-size: 28px;
+    padding-right: 10px;
+  }
+
+  button {
+    padding: 18px;
+    font-size: 20px;
+  }
+
+  .memory-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .display {
+    height: 50px;
+    font-size: 24px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 18px;
+  }
+}
